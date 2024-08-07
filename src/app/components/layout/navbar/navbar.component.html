@@ -1,0 +1,28 @@
+<mat-sidenav-container class="example-container">
+  <mat-sidenav #sidenav [mode]="'over'" [style]="style">
+    <div class="example-group">
+      <h1 style="text-align: center; border-bottom: 2px solid white">
+        {{ title }}
+      </h1>
+      @for (route of routes; track $index) {
+      <li (click)="close()" routerLink="/{{ route.internalRoute }}">
+        <a>{{ route.label }}</a>
+      </li>
+      }
+    </div>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <core-header
+      [title]="title"
+      [color]="color"
+      [navBar]="navBar"
+      [bgColor]="bgColor"
+      (navControler)="parentHandleClick($event)"
+    ></core-header>
+
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

@@ -1,0 +1,25 @@
+.example-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.example-group {
+  display: block;
+  margin: 20px;
+  padding: 10px;
+  min-width: 300px;
+}
+
+li {
+  cursor: pointer;
+  margin: 1rem 0;
+}
+
+.content {
+  margin: 0 auto;
+  width: 80%;
+  height: 90vh;
+}
